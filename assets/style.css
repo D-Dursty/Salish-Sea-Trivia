@@ -1,0 +1,81 @@
+*{ color:bisque;
+    font-family: barrio;
+}
+body {
+    display:block;
+    width: 1600 px;
+    margin: 2%;
+}
+
+header {
+    display:flex;
+    width: 100%;
+    background-color: rgb(31, 28, 36);
+    justify-content: center;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    max-width: 60%;
+    min-width: 50%;
+    text-align: center;
+}
+ 
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+main section {
+    display:flex
+    justify-content: center;
+}
+
+main section img {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.card1 {
+    display: flex;
+    justify-content: center;
+    min-width: 40%;
+    max-width: 100%;
+    border-color: azure;
+    background-color: rgba(240, 255, 255, 0.571);
+}
+
+.card2
+
+#questions
+
+.card3
+
+.answers 
+
+.answers li
+
+.button
+
+#start
+
+footer 
+
+.card4
+
+.card4 h2
+
+#timer
+
+.card5
+
+.card5 h2
+
+#score
+
+.bottom-footer
+
+.bottom-footer h4
