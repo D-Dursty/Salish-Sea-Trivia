@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salish Sea Trivia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Peralta&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <header>
-        <h1>Down by the (Salish Sea) Shore Trivia</h1>
+        <h1>DOWN by the (SALISH SEA) SHORE TRIVIA</h1>
     </header>
     <main>
         
@@ -17,25 +20,27 @@
             <img src="./assets/images/salishsea.png"/>
             <section class="card1">
                 <div class="card2">
-                <h2 id="questions"></h2>
+                    <h2 id="question"> I am putting my questions header</h2>
                 </div>
-                <div class="card3"><ul class="answers">
-                    <li></li>
-                    </ul>
+                <div class="card3" id="answer-buttons">
+                   <li class="li-1"><button class="answer-btn" id="answer1">Answer 1</button></li>
+                   <li class="li-2"><button class="answer-btn" id="answer2">Answer 2</button></li>
+                   <li class="li-2"><button class="answer-btn" id="answer3">Answer 3</button></li>
                 </div>
-                <div class="button"> 
-                    <button id="start">Start Game!
-                    </button> 
-                </div>      
-        </section>
-    </section>
+                <div class="move-buttons"> 
+                    <button id="start-button">Start Game!</button> 
+                    <button id="next-button">Next Question</button> 
+                </div>
+                
+            </section>
+            <div class="counters">     
+                    <Section class="card4"><h2 id="timer">Seconds left:</h2></Section>
+                    <Section class="card5"><h2 id="Wins">Correct Answer Keeper:</h2></Section>
+            </div>
     </main>
+    
     <Footer>
-        <Section class="card4"><h2 id="timer">Seconds left:</h2></Section>
-        <Section class="card5"><h2 id="score">Wins:</h2></Section>
-        <div class=bottom-footer>
             <h4>Created by Devon Durst, Sept 2022</h4>
-        </div>
     </Footer>
     <script href="./assets/script.js"></script>
 </body>
