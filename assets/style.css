@@ -57,8 +57,9 @@ main {
 }
 
 .card2{
-    display:block;
+    display:flex;
     align-items: center;
+    position:absolute; 
     border-color: antiquewhite;
     border-style: initial;
 }
@@ -67,6 +68,9 @@ main {
     display:flex;
     justify-content: center;
     width: 90%;
+    font-family: roboto mono;
+    font-size: large;
+    text-align: center;
 }
 
 .card3 {

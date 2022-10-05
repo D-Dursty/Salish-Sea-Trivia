@@ -11,6 +11,23 @@ var answer1 = document.getElementById("answer1");
 var answer2 = document.getElementById("answer2");
 var answer3 = document.getElementById("answer3");
 
+var questionIndex = ["q1","q2", "q3", "q4", "q5","q6", "q7", "q8"]{
+    q1 = {
+        question: 'The Salish Sea touches how many countries?', 
+        Answer1: 1, 
+        Answer2: 2,
+        Answer3: 3,
+        Answer2 = true
+    }
+    
+        
+
+}
+
+
+
+
+
 var secondsLeft = 60;
 
 function setTime() {
@@ -24,9 +41,9 @@ function setTime() {
         }
     }, 1000);
 }
-    //event listener for start button
-    //hide start button after it is clicked
-    //replace with next button
+    //event listener for start button, yes
+    //hide start button after it is clicked, yes
+    //replace with next button, yes 
 
 function startGame() {
     setTime(); 
