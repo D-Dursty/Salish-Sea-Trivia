@@ -1,5 +1,6 @@
+console.log("connected");
 var timeEL = document.getElementById("timer");
-var question = document.getElementById("questions");
+var question = document.getElementById("question");
 var answerButtons = document.querySelector(".answer-btn");
 var button = document.getElementById("button");
 var startButton = document.getElementById("start-button");
@@ -10,58 +11,67 @@ var score;
 var answer1 = document.getElementById("answer1");
 var answer2 = document.getElementById("answer2");
 var answer3 = document.getElementById("answer3");
-
-var questionIndex = ["q1","q2", "q3", "q4", "q5","q6", "q7", "q8"]{
-    q1 = {
-        question: 'The Salish Sea touches how many countries?', 
-        Answer1: 1, 
-        Answer2: 2,
-        Answer3: 3,
-        Answer2 = true
-    }
-    
-        
-
-}
-
-
-
-
-
+//this = true
 var secondsLeft = 60;
 
+var index = 0
+var questionIndexObjArray = [
+    {   question: 'The Salish Sea touches how many countries?',
+        answer1: 1,
+        answer2: 2,
+        answer3: 3,
+        correctAnswer: 2
+    },
+    {   question: 'The Salish Sea touches how many countries?',
+        answer1: 1,
+        answer2: 2,
+        answer3: 3,
+        correctAnswer: 2
+    }
+
+function displayQuestion() {
+    question.textContent = questionIndexObjArray[index].question
+    answer1.textContent = questionIndexObjArray[index].answer1
+    answer2.textContent = questionIndexObjArray[index].answer2
+    answer3.textContent = questionIndexObjArray[index].answer3
+}
+
 function setTime() {
-    var timerInterval = setInterval(funtion() {
+    var timerInterval = setInterval(function () {
         secondsLeft--;
         timeEL.textContent = secondsLeft;
-        
-        if(secondsLeft === 0) {
+
+        if (secondsLeft === 0) {
             score == 0;
             clearInterval(timerInterval);
         }
     }, 1000);
 }
-    //event listener for start button, yes
-    //hide start button after it is clicked, yes
-    //replace with next button, yes 
+//event listener for start button, yes
+//hide start button after it is clicked, yes
+//replace with next button, yes 
 
 function startGame() {
-    setTime(); 
+    setTime();
     startButton.remove();
-    if (nextButton.style.display === "none") {
-        nextButton.style.display = "flex"
-    }
-    if (answerButtons.style.display === "none"){
-        answerButtons.style.display = "contents"
-    }
+    //   if (nextButton.style.display === "none") {
+    displayQuestion()
+    nextButton.style.display = "block"
+    // }
+    //  if (answerButtons.style.display === "none") {
+    answerButtons.style.display = "block"
+    // }
     //press start (click event)
     //timer starts    
     //question is loaded via random generator
 }
 
 function selectNextQuestion() {
+
     //click event happens
-    //questionAnswerCombo is called through function randomizer
+    //index increases
+    //display question is called 
+
 }
 
 function chooseAnswer() {
@@ -71,6 +81,8 @@ function chooseAnswer() {
     //if answer is true, add one point to wins, 
     //if answer is false, -5 seconds from timer
 }
+
+//function Game()
 
 startButton.addEventListener("click", startGame)
 nextButton.addEventListener("click", selectNextQuestion)
@@ -90,7 +102,7 @@ nextButton.addEventListener("click", selectNextQuestion)
 //The start button becomes a next button when the game is started
 //The header has rules for the game, and below is the start button.
 //The game starts when the button is CLICKED, the header has the first question (object)
-//The body of the .card will contain the multiple choice questions, 
+//The body of the .card will contain the multiple choice questions,
 //the correct answer defined by .this=true
 //objects, and object answers, will be randomized
 
